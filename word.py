@@ -21,14 +21,17 @@ def format_phone_number(s):
     s = s.replace('-', '')
     return '-'.join([s[:1], s[1:4], s[4:7], s[7:11]])
 
-def words_to_number(s):
+def words_to_number(s, format=True):
     r = ""
     for i in s.lower():
         if i in letter_to_number:
             r += str(letter_to_number[i])
         else:
             r += i
-    return format_phone_number(r)
+    if format:
+        return format_phone_number(r)
+    else:
+        return r
 
 def number_to_words(s):
     return s
