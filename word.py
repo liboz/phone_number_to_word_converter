@@ -53,7 +53,6 @@ def generate_possibilities(s, number_to_word_map):
 def all_wordifications(s):
     s = s.replace('-', '')
     possibilities = generate_possibilities(s, number_to_word_map)
-    print(possibilities)
     return possibilities
 
 def number_to_words(s):
